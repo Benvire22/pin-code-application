@@ -1,0 +1,16 @@
+.PinCodeDisplay {
+  height: 70px;
+  padding: 30px;
+  margin: 0 10px 10px;
+  border: 1px solid #817d7d;
+  background-color: #f6f3f3;
+}
+
+.PinCodeDisplay-password {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.PinCodeDisplay-message {
+  font-size: 20px;
+}

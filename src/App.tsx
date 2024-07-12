@@ -1,11 +1,8 @@
-import Keyboard from "./containers/PinCode/PinCode";
+import PinCode from './containers/PinCode/PinCode';
+import './App.css';
 
 const App = () => {
-    return (
-        <div>
-            <Keyboard />
-        </div>
-    );
+  return <PinCode />;
 };
 
 export default App;

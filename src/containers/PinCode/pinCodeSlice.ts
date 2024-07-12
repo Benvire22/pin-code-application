@@ -1,7 +1,17 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-const initialState = {
-  password: '1377',
+export interface IPinCode {
+  password: string,
+  hiddenPassword: string,
+  input: string,
+  message: string,
+  color: string,
+}
+
+const PIN_CODE = '1377';
+
+const initialState: IPinCode = {
+  password: PIN_CODE,
   hiddenPassword: '',
   input: '',
   message: '',

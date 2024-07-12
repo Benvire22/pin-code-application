@@ -1,9 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit';
 import passwordSlice from "../containers/PinCode/pinCodeSlice";
 
-
-
-const  store =  configureStore({
+const store =  configureStore({
     reducer: passwordSlice.reducer
 });
 
