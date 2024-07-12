@@ -1,5 +1,6 @@
 .PinCode {
   border: 1px solid #817d7d;
+  border-radius: 5px;
   width: 270px;
   padding: 10px 0;
 }

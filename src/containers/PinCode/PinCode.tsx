@@ -1,6 +1,6 @@
-import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../../app/store';
-import {deleteLastInput, setColor, setHiddenPassword, setInput, setMessage} from './pinCodeSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteLastInput, setColor, setHiddenPassword, setInput, setMessage } from './pinCodeSlice';
+import { RootState } from '../../app/store';
 import PinCodeDisplay from '../../components/PinCodeDisplay/PinCodeDisplay';
 import Buttons from '../../components/Buttons/Buttons';
 import Button from '../../components/Buttons/Button/Button';
@@ -25,10 +25,10 @@ const PinCode = () => {
     if (input.length === 4) {
       if (input === password) {
         dispatch(setColor('#00ff00'));
-        dispatch(setMessage('Access Granted'));
+        dispatch(setMessage('Access Granted!'));
       } else {
         dispatch(setColor('#ff0000'));
-        dispatch(setMessage('Access Denied'));
+        dispatch(setMessage('Access Denied!'));
       }
     }
   };

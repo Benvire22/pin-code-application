@@ -1,14 +1,7 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {IPinCode} from '../../types';
 
-export interface IPinCode {
-  password: string,
-  hiddenPassword: string,
-  input: string,
-  message: string,
-  color: string,
-}
-
-const PIN_CODE = '1377';
+const PIN_CODE = '2003';
 
 const initialState: IPinCode = {
   password: PIN_CODE,
@@ -18,27 +11,27 @@ const initialState: IPinCode = {
   color: '#ffffff',
 };
 
-const passwordSlice = createSlice({
+const pinCodeSlice = createSlice({
   name: 'password',
   initialState,
   reducers: {
-    setInput(state, action: PayloadAction<string>) {
+    setInput: (state, action: PayloadAction<string>) => {
       if (state.input.length < 4) {
         state.input = state.input + action.payload;
       }
     },
-    deleteLastInput(state) {
+    deleteLastInput: (state) => {
       if (state.input.length > 0) {
         state.input = state.input.slice(0, -1);
       }
     },
-    setMessage(state, action: PayloadAction<string>) {
+    setMessage: (state, action: PayloadAction<string>) => {
       state.message = action.payload;
     },
-    setColor(state, action: PayloadAction<string>) {
+    setColor: (state, action: PayloadAction<string>) => {
       state.color = action.payload;
     },
-    setHiddenPassword(state) {
+    setHiddenPassword: (state) => {
       let password = '';
 
       for (let i = 0; i < state.input.length; i++) {
@@ -46,8 +39,8 @@ const passwordSlice = createSlice({
       }
 
       state.hiddenPassword = password;
-    }
-  }
+    },
+  },
 });
 
 export const {
@@ -56,6 +49,6 @@ export const {
   setMessage,
   setColor,
   setHiddenPassword,
-} = passwordSlice.actions;
+} = pinCodeSlice.actions;
 
-export default passwordSlice;
+export default pinCodeSlice;

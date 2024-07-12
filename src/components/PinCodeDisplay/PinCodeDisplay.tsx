@@ -8,9 +8,9 @@ const PinCodeDisplay = () => {
   const message = useSelector((state: RootState) => state.message);
 
   return (
-    <div className="PinCodeDisplay">
+    <div className="PinCodeDisplay" style={{backgroundColor: color}}>
       <p className="PinCodeDisplay-password">{hiddenPassword}</p>
-      <p className="PinCodeDisplay-message" style={{color: color}}>{message}</p>
+      <p className="PinCodeDisplay-message">{message}</p>
     </div>
   );
 };

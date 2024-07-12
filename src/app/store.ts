@@ -1,8 +1,8 @@
-import {configureStore} from '@reduxjs/toolkit';
-import passwordSlice from "../containers/PinCode/pinCodeSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import pinCodeSlice from '../containers/PinCode/pinCodeSlice';
 
-const store =  configureStore({
-    reducer: passwordSlice.reducer
+const store = configureStore({
+  reducer: pinCodeSlice.reducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
