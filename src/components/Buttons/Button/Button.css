@@ -1,15 +1,14 @@
 .Button {
   width: 80px;
   font-size: 20px;
-  border: 1px solid #d8d1d1;
   background-color: rgba(244, 238, 238, 0.7);
+  border: 1px solid #d8d1d1;
 }
 
 .Button:hover {
   background-color: rgba(237, 235, 235, 0.5);
-  transition: 0.1s;
   border: 1px solid #978e8e;
-
+  transition: 0.1s;
 }
 
 .Button:active {
